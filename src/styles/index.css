@@ -1,0 +1,593 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+:root {
+    --reen-white: #fff;
+    --reen-bg: #D9F5EC;
+    --reen-green: #2DB88A;
+    --reen-dark: #202020;
+    --reen-purple: #40207D;
+    --reen-red: #FF5B6E;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: var(--reen-dark)
+}
+
+.logo-wrapper {
+    width: auto;
+    max-width: 200px;
+}
+
+a.logo,
+a.logo>img {
+    width: 100%;
+}
+
+.reen-bg {
+    background: var(--reen-bg)
+}
+
+.reen-green {
+    color: var(--reen-green)
+}
+
+.reen-purple {
+    color: var(--reen-purple)
+}
+
+.reen-red {
+    color: var(--reen-red)
+}
+
+.reen-btn {
+    border-color: var(--reen-green);
+    color: var(--reen-green)
+}
+
+.reen-btn-primary {
+    background: var(--reen-green);
+    border-color: var(--reen-green);
+    color: #fff
+}
+
+.reen-section-title {
+    font-size: clamp(30px, 3vw, 30px);
+    letter-spacing: -.6px
+}
+
+.reen-hero {
+    min-height: 450px;
+    padding-top: 78px
+}
+
+.reen-hero-art {
+    max-width: 400px
+}
+
+.reen-service p,
+.reen-faq-copy {
+    max-width: 385px;
+    line-height: 1.55
+}
+
+.reen-service-icon {
+    color: var(--reen-red)
+}
+
+.reen-faq {
+    position: relative;
+    overflow: hidden
+}
+
+.reen-question-mark {
+    position: absolute;
+    right: -8px;
+    top: -5px;
+    color: #B8D9CE;
+    opacity: .8;
+    font-size: 300px;
+    line-height: 1;
+    font-weight: 900;
+    pointer-events: none
+}
+
+.reen-footer-card {
+    min-height: 370px;
+    background:
+        linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+        url("../assets/images/footer-building.png") right bottom / cover no-repeat;
+    border-radius: 38px 0 0 0;
+}
+
+.reen-email {
+    border-color: var(--reen-red)
+}
+
+.gap-6 {
+    gap: 4rem !important;
+}
+
+.gap-7 {
+    gap: 5rem !important;
+}
+
+@media(max-width:767.98px) {
+    .reen-hero {
+        min-height: 680px;
+        padding-top: 115px
+    }
+
+    .reen-hero-art {
+        max-width: 430px;
+        width: 76%
+    }
+
+    .reen-question-mark {
+        font-size: 230px;
+        top: 65px;
+        right: -35px
+    }
+
+    .reen-footer-card {
+        min-height: 330px;
+        border-radius: 30px 0 0 0
+    }
+
+    .gap-6,
+    .gap-7 {
+        gap: 1rem !important;
+    }
+}
+
+/* ================================
+   AUTH COMMON
+================================ */
+
+.reen-auth-page {
+    min-height: 100vh;
+    background: var(--reen-bg) url("../../assets/images/graphic_bg.png") repeat;
+}
+
+.reen-auth-left {
+    min-height: 100vh;
+    padding: 40px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.reen-auth-content {
+    max-width: 700px;
+}
+
+.reen-auth-title {
+    font-size: clamp(42px, 5vw, 50px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+}
+
+.reen-auth-description {
+    max-width: 650px;
+    color: #555;
+    font-size: 16px;
+}
+
+.reen-auth-right {
+    padding: 40px 5%;
+}
+
+.reen-auth-card {
+    width: 100%;
+    max-width: 680px;
+    margin-left: auto;
+    padding: 45px;
+    background: #fff;
+    border-radius: 28px;
+}
+
+.reen-auth-title-sm {
+    color: var(--reen-green);
+}
+
+.reen-input {
+    height: 46px;
+    border-radius: 10px;
+    border: 1px solid #999;
+    padding: 0 20px;
+    font-size: 14px;
+}
+
+.reen-input:focus {
+    border-color: var(--reen-green);
+    box-shadow: 0 0 0 .15rem rgba(45, 184, 138, .15);
+}
+
+.reen-auth-button {
+    height: 46px;
+    border: 1px solid var(--reen-green);
+    border-radius: 10px;
+    background: var(--reen-green);
+    color: #fff;
+}
+
+.reen-auth-button:hover {
+    background: var(--reen-green);
+    border-color: var(--reen-green);
+    color: #fff;
+}
+
+.reen-social-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--reen-green);
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* ================================
+   REGISTER
+================================ */
+
+.reen-register-link {
+    color: var(--reen-green);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 991.98px) {
+
+    .reen-auth-left {
+        min-height: auto;
+        padding: 50px 7% 20px;
+    }
+
+    .reen-auth-right {
+        padding: 20px 7% 50px;
+    }
+
+    .reen-auth-card {
+        max-width: 100%;
+        margin: 0;
+        padding: 45px;
+    }
+
+    .reen-auth-title {
+        font-size: 48px;
+    }
+
+    .reen-auth-description {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 575.98px) {
+
+    .reen-auth-left {
+        padding: 35px 20px 15px;
+    }
+
+    .reen-auth-right {
+        padding: 15px 20px 35px;
+    }
+
+    .reen-auth-card {
+        padding: 30px 24px;
+        border-radius: 22px;
+    }
+
+    .reen-auth-title {
+        font-size: 42px;
+    }
+
+    .reen-auth-title-sm {
+        font-size: 30px;
+    }
+
+    .reen-auth-description {
+        font-size: 16px;
+    }
+}
+
+/* ================================
+   DASHBOARD
+================================ */
+
+.reen-dashboard {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background: url("../assets/images/login-background.png") center / cover no-repeat;
+}
+
+.reen-dashboard::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.70);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.reen-dashboard > * {
+    position: relative;
+    z-index: 1;
+}
+
+.reen-dashboard-sidebar {
+    min-height: 100vh;
+}
+
+.reen-sidebar-item {
+    color: #555;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: .2s;
+}
+
+.reen-sidebar-item.active,
+.reen-sidebar-item:hover {
+    color: var(--reen-green);
+}
+
+.reen-dashboard-header {
+    min-height: 110px;
+}
+
+.reen-balance-card,
+.reen-account-card {
+    background: rgba(45, 184, 138, .18);
+}
+
+.reen-balance-logo {
+    width: 55px;
+    height: 55px;
+    border: 2px solid var(--reen-green);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--reen-green);
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.reen-card-label {
+    color: var(--reen-purple);
+    font-size: 14px;
+}
+
+.reen-card-value {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.reen-account-card {
+    min-height: 125px;
+}
+
+.reen-transaction-item {
+    min-height: 52px;
+}
+
+.reen-upgrade-card {
+    min-height: 185px;
+    background:
+        url("../assets/images/upgrade2.png") center/cover no-repeat,
+        var(--reen-green);
+}
+
+
+/* Mobile */
+
+@media (max-width: 991.98px) {
+
+    .reen-dashboard-sidebar {
+        min-height: auto;
+    }
+
+    .reen-dashboard-header {
+        min-height: auto;
+    }
+
+}
+
+@media (max-width: 575.98px) {
+
+    .reen-card-value {
+        font-size: 18px;
+    }
+
+    .reen-balance-card .row>div {
+        flex: 0 0 100%;
+    }
+
+    .reen-transaction-item {
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+}
+
+/* =========================
+   LOGOUT MODAL
+========================= */
+
+.reen-logout-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(45, 184, 138, 0.45);
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.reen-logout-modal {
+    width: 100%;
+    max-width: 360px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.reen-logout-message {
+    margin: 0 0 20px;
+    color: #707070;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.reen-logout-cancel,
+.reen-logout-confirm {
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.reen-logout-cancel {
+    background: #d3d3d3;
+    border-color: #d3d3d3;
+    color: #202020;
+}
+
+.reen-logout-cancel:hover {
+    background: #c7c7c7;
+    border-color: #c7c7c7;
+    color: #202020;
+}
+
+.reen-logout-confirm {
+    background: var(--reen-green);
+    border-color: var(--reen-green);
+    color: #fff;
+}
+
+.reen-logout-confirm:hover {
+    background: var(--reen-green);
+    border-color: var(--reen-green);
+    color: #fff;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 767.98px) {
+
+    .reen-logout-modal {
+        max-width: 560px;
+        padding: 50px 40px;
+        border-radius: 15px;
+    }
+
+    .reen-logout-message {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .reen-logout-cancel,
+    .reen-logout-confirm {
+        height: 56px;
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+
+    .reen-logout-overlay {
+        padding: 16px;
+    }
+
+    .reen-logout-modal {
+        padding: 40px 24px;
+        border-radius: 20px;
+    }
+
+    .reen-logout-message {
+        margin-bottom: 30px;
+        font-size: 18px;
+    }
+
+    .reen-logout-cancel, .reen-logout-confirm {
+        height: 52px;
+        font-size: 18px;
+    }
+}
+
+/* =========================
+   CUSTOMER ADDRESS
+========================= */
+
+.reen-address-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+}
+
+.reen-address-header {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.reen-address-header h2 {
+    color: var(--reen-dark);
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.reen-address-submit {
+    width: 220px;
+}
+
+.reen-address-submit .reen-auth-button {
+    width: 100%;
+}
+
+
+@media (max-width: 767.98px) {
+
+    .reen-address-card {
+        padding: 30px 24px;
+        border-radius: 20px;
+    }
+
+    .reen-address-header h2 {
+        font-size: 24px;
+    }
+
+    .reen-address-submit {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 575.98px) {
+
+    .reen-address-card {
+        padding: 24px 18px;
+    }
+
+}

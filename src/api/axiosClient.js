@@ -1,0 +1,78 @@
+import axios from "axios";
+
+const axiosClient = axios.create({
+    baseURL: import.meta.env.VITE_API_BASE,
+    headers: {
+        "Content-Type": "application/json",
+    },
+});
+
+
+/*
+|--------------------------------------------------------------------------
+| Request Interceptor
+|--------------------------------------------------------------------------
+*/
+
+axiosClient.interceptors.request.use(
+    (config) => {
+
+        const token =
+            localStorage.getItem("accessToken");
+
+        if (token) {
+            config.headers.Authorization =
+                `Bearer ${token}`;
+        }
+
+        return config;
+    },
+
+    (error) => {
+        return Promise.reject(error);
+    }
+);
+
+
+/*
+|--------------------------------------------------------------------------
+| Response Interceptor
+|--------------------------------------------------------------------------
+*/
+
+axiosClient.interceptors.response.use(
+    (response) => {
+        return response;
+    },
+
+    (error) => {
+
+        if (error.response?.status === 401) {
+
+            console.log(
+                "Session expired. Removing access token."
+            );
+
+            // Remove authentication data
+            localStorage.removeItem(
+                "accessToken"
+            );
+
+            localStorage.removeItem(
+                "user"
+            );
+
+            // Redirect to login
+            if (
+                window.location.pathname !== "/login"
+            ) {
+                window.location.href = "/login";
+            }
+        }
+
+        return Promise.reject(error);
+    }
+);
+
+
+export default axiosClient;
